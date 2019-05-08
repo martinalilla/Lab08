@@ -10,6 +10,7 @@ public class TestModel {
 		
 		model.createGraph(4);
 		System.out.println(String.format("**Grafo creato**\n"));
+		System.out.println(model.g);
 		
 		List<String> vicini = model.displayNeighbours("casa");
 		System.out.println("Neighbours di casa: " + vicini + "\n");

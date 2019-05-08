@@ -1,7 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
-	
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
-	
-<BorderPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.dizionariograph.DizionarioGraphController">
-	<!-- TODO Add Nodes -->
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+
+<BorderPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.171" fx:controller="it.polito.tdp.dizionariograph.DizionarioGraphController">
+   <top>
+      <VBox prefHeight="364.0" prefWidth="663.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="18.0" prefWidth="663.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Lab8_Dizionario">
+                     <HBox.margin>
+                        <Insets left="250.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+            <HBox prefHeight="44.0" prefWidth="663.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Inserire il numero di lettere:">
+                     <HBox.margin>
+                        <Insets left="100.0" right="80.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="numLettere">
+                     <HBox.margin>
+                        <Insets bottom="10.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox prefHeight="32.0" prefWidth="663.0">
+               <children>
+                  <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Inserire una parola da cercare:">
+                     <HBox.margin>
+                        <Insets left="100.0" right="70.0" />
+                     </HBox.margin>
+                  </Text>
+                  <TextField fx:id="parola">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <VBox prefHeight="262.0" prefWidth="663.0">
+               <children>
+                  <HBox prefHeight="31.0" prefWidth="663.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#doGeneraGrafo" text="Genera Grafo">
+                           <HBox.margin>
+                              <Insets left="30.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#doTrovaVicini" text="Trova Vicini">
+                           <HBox.margin>
+                              <Insets left="150.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#doGradoMax" text="Trova Grado Max">
+                           <HBox.margin>
+                              <Insets left="200.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <TextArea fx:id="result" prefHeight="200.0" prefWidth="200.0" />
+                  <Button mnemonicParsing="false" onAction="#doReset" text="Reset">
+                     <VBox.margin>
+                        <Insets left="600.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </top>
 </BorderPane>
